@@ -4,9 +4,10 @@ import { exec } from "child_process";
 const command: { [key: string]: string } = {
   darwin: "rm -rf ~/Library/Application\\ Support/Microsoft/Teams",
   win32: "rd %appdata%\\Microsoft\\Teams /S /Q",
+  linux: "rm -rf ~/.config/Microsoft/Microsoft\\ Teams/Cache/"
 };
 
-if (["darwin", "win32"].includes(process.platform)) {
+if (["darwin", "win32", "linux"].includes(process.platform)) {
   console.log(`
  ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
  ┃ Microsoft Teams cache cleaner ┃

@@ -8,7 +8,7 @@
     "build": "tsc",
     "watch": "tsc --watch",
     "buildandrun": "tsc && node .",
-    "package": "tsc && pkg ./build/index.js --targets latest-macos-x64,latest-win-x64 --output executables/teamscachecleaner"
+    "package": "tsc && pkg ./build/index.js --targets latest-macos-x64,latest-win-x64,latest-linux --output executables/teamscachecleaner"
   },
   "author": "",
   "license": "MIT",
